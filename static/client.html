@@ -1,0 +1,281 @@
+<html>
+  <head>
+    <title>Twidder</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="stylesheet" type="text/css" href="static/client.css">
+    <script type="text/view" id="welcomeView">
+      <div id="main">
+      <img src="static/twidderLogo.png" alt="logo and slogan" id="logo">
+      <div id="welcomeForms">
+
+        <form id="signInForm" method= "POST" onsubmit="signInSubmit(); return false">
+          <h2 class= "SignText">Sign In</h2>
+          <div class= "Row">
+            <label for="signInEmail">Email</label>
+            <input class="Field" type="email" name="signInEmail" id="signInEmail" required>
+          </div>
+          <div class= "Row">
+            <label class= "Row" for="signInForm">Password</label>
+            <input class="Field" type="password" name="signInPassword" id="signInPassword" required>
+          </div>
+
+
+          <input type= "submit" value= "Sign In" name="signInButton" class="SubmissionButton" id= "signInButton">
+          <p name="forgetButton" id="forgetButton" onclick="forgetButton()">Forgot password?</p>
+        </form>
+
+
+        <form id="signUpForm" method= "POST" onsubmit= "signUpSubmit(); return false">
+          <h2 class= "SignText">Sign Up</h2>
+          <div class="Row">
+            <label for="signUpEmail">Email</label>
+            <input class="Field" type="email" name="signUpEmail" id="signUpEmail" required>
+          </div>
+          <div class="Row">
+            <label for="signUpPassword">Password</label>
+            <input class="Field" type="password" name="signUpPassword" id="signUpPassword" required>
+          </div>
+          <div class="Row">
+            <label for="signUpRepeatPassword">Repeat</label>
+            <input class="Field" type="password" name="signUpRepeatPassword" id="signUpRepeatPassword" required>
+          </div>
+          <div class="Row">
+            <label for="signUpFirstName">First Name</label>
+            <input class="Field" type="text" name="signUpFirstName" id="signUpFirstName" required>
+          </div>
+          <div class="Row">
+            <label for="signUpLastName">Last Name</label>
+            <input class="Field" type="text" name="signUpLastName" id="signUpLastName" required>
+          </div>
+          <div class="Row">
+            <label for="gender">Gender</label>
+            <select class="Field" name="gender" id="signUpGender" required>
+              <option value="" disabled selected></option>
+              <option value="man">Man</option>
+              <option value="woman">Woman</option>
+              <option value="other">Other</option>
+              <option value="unknown">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="Row">
+            <label for="signUpCity">City</label>
+            <input class="Field" type="text" name="signUpCity" id="signUpCity" required>
+          </div>
+          <div class="Row">
+            <label for="signUpCountry">Country</label>
+            <input class="Field" type="text" name="signUpCountry" id="signUpCountry" required>
+          </div>
+          <div>
+            <input type="submit" name="signUpButton" value="Sign Up" class="SubmissionButton" id= "signUpButton">
+          </div>
+
+        </form>
+      </div>
+      </div>
+    </script>
+    <script type="text/view" id="profileView">
+      <div id="profileDiv">
+        <div id="profileTitle" class="profileBox">
+          <img src="static/twidderText.PNG" alt="Twidder" id="twidderTitle">
+        </div>
+        <div id="profileTabRow">
+          <button onclick="clickHome()" class="ProfileButton">
+            Home
+          </button>
+          <button onclick="clickBrowse()" class="ProfileButton">
+            Browse
+          </button>
+          <button onclick="clickAccount()" class="ProfileButton">
+            Account
+          </button>
+        </div>
+        <div id="profileContent" class="ProfileBox">
+          <div id="profileHome" class="Content">
+            <div id="homeLeftSide">
+              <div class="Info">
+                <h1> Info </h1>
+                <div>
+                  <label class="HomeUserAttribute"> Email: </label>
+                  <label id="emailHome"> </label>
+                </div>
+                <div>
+                  <label class="HomeUserAttribute"> First Name: </label>
+                  <label id="firstNameHome"> </label>
+                </div>
+                <div>
+                  <label class="HomeUserAttribute"> Last Name:  </label>
+                  <label id="lastNameHome"> </label>
+                </div>
+                <div>
+                  <label class="HomeUserAttribute"> Gender: </label>
+                  <label id="genderHome"> </label>
+                </div>
+                <div>
+                  <label class="HomeUserAttribute"> City: </label>
+                  <label id="cityHome"> </label>
+                </div>
+                <div>
+                  <label class="HomeUserAttribute"> Country: </label>
+                  <label id="countryHome"> </label>
+                </div>
+              </div>
+              <div id="postBox">
+                <h1>Post message</h1>
+                <form id="messageForm" method="POST" onsubmit="postMessageHome(); return false">
+                  <div>
+
+                    <input id="messageBoxHome" type="text">
+                    <input type="submit" name="messageButton" value="Post" class="SubmissionButton" id= "messageButton">
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div id="homeRightSide">
+              <h1> My wall </h1>
+              <button onclick="refreshButtonHome()" class="SubmissionButton" id="refreshButton">Refresh wall</button>
+              <div id="wallHome">
+
+              </div>
+            </div>
+          </div>
+          <div id="profileBrowse" class="Content">
+              <div id="searchUserBox">
+                <h1>Enter email</h1>
+                <form id="messageForm" method="POST" onsubmit="searchUser(); return false">
+                  <div>
+                    <input id="searchUserEmail" type="text">
+                    <input type="submit" name="messageButton" value="Search" class="SubmissionButton" id= "messageButton">
+                  </div>
+                </form>
+              </div>
+              <div id="homeLeftSide">
+                <div class="Info">
+                  <h1> Info </h1>
+                  <div>
+                    <label class="HomeUserAttribute"> Email: </label>
+                    <label id="emailBrowse"> </label>
+                  </div>
+                  <div>
+                    <label class="HomeUserAttribute"> First Name: </label>
+                    <label id="firstNameBrowse"> </label>
+                  </div>
+                  <div>
+                    <label class="HomeUserAttribute"> Last Name:  </label>
+                    <label id="lastNameBrowse"> </label>
+                  </div>
+                  <div>
+                    <label class="HomeUserAttribute"> Gender: </label>
+                    <label id="genderBrowse"> </label>
+                  </div>
+                  <div>
+                    <label class="HomeUserAttribute"> City: </label>
+                    <label id="cityBrowse"> </label>
+                  </div>
+                  <div>
+                    <label class="HomeUserAttribute"> Country: </label>
+                    <label id="countryBrowse"> </label>
+                  </div>
+                </div>
+                <div id="postBox">
+                  <h1>Post message</h1>
+                  <form id="messageForm" method="POST" onsubmit="postMessageBrowse(); return false">
+                    <div>
+
+                      <input id="messageBoxBrowse" type="text">
+                      <input type="submit" name="messageButton" value="Post" class="SubmissionButton" id= "messageButton">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div id="homeRightSide">
+                <h1> Wall </h1>
+                <button onclick="refreshButtonBrowse()" class="SubmissionButton" id="refreshButton">Refresh wall</button>
+                <div id="wallBrowse">
+
+                </div>
+              </div>
+          </div>
+          <div id="profileAccount" class="Content">
+            <form id="changePasswordForm" method="POST" onsubmit="changePassword(); return false">
+              <div>
+                <div class="PasswordChangeInputRow">
+                  <label for="prevPassword" class="changePasswordLabel"> Previous password </label>
+                  <input class="Field" type="password" name="prevPassword" id="prevPassword" required>
+                </div>
+                <div class="PasswordChangeInputRow">
+                  <label for="newPassword" class="changePasswordLabel"> New password </label>
+                  <input class="Field" type="password" name="newPassword" id="newPassword" required>
+                </div>
+                <div class="PasswordChangeInputRow">
+                  <label for="newPasswordRepeat" class="changePasswordLabel"> Repeat new password </label>
+                  <input class="Field" type="password" name="newPasswordRepeat" id="newPasswordRepeat" required>
+                </div>
+
+                <input type="submit" name="changePasswordButton" value="Submit" class="SubmissionButton" id= "changePasswordButton">
+              </div>
+            </form>
+            <button type= "button" name="signOutButton" value="Sign Out" class="SubmissionButton" id= "signOutButton" onclick= "signOutSubmit()">
+              Sign Out
+            </button>
+          </div>
+        </div>
+        <!-- <img src="https://i.pinimg.com/originals/b2/34/ae/b234ae71146c2252c74406ea4406610b.gif" alt="what meme" id="meme"> -->
+
+      </div>
+    </script>
+    <script type="text/view" id="forgetPasswordView">
+      <div id="profileDiv">
+        <div id="profileTitle" class="profileBox">
+          <img src="static/twidderText.PNG" alt="Twidder" id="twidderTitle">
+        </div>
+        <div id="recoverPassword" class="profileBox">
+          <h2 class= "SignText">Recover Password</h2>
+          <form id="sendEmailForm" method= "POST" onsubmit= "sendEmail(); return false">
+            <div class= "Row">
+              <label for="recoverEmail">Email</label>
+              <input class="Field" type="email" name="recoverEmail" id="recoverEmail" required>
+              <input type="submit" name="sendEmailButton" value="Send" class="SubmissionButton" id= "sendEmailButton">
+            </div>
+          </form>
+          <div id="codeText">
+            <p>Code sent successfully. Please check your email and enter the code below.</p>
+          </div>
+          <form id="sendCodeForm" method= "POST" onsubmit= "sendCode(); return false">
+            <div class= "Row">
+              <label for="recoverCode">Code</label>
+              <input class="Field" type="text" name="recoverCode" id="recoverCode" required>
+              <input type="submit" name="codeButton" value="Verify" class="SubmissionButton" id= "signInButton">
+            </div>
+          </form>
+          <form id="resetPasswordForm" method= "POST" onsubmit= "resetPasswordButton(); return false">
+            <div class= "PasswordChangeInputRow">
+              <label for="resetNewPassword">New password</label>
+              <input class="Field" type="password" name="resetNewPassword" id="resetNewPassword" required>
+            </div>
+            <div class= "PasswordChangeInputRow">
+              <label for="resetRepeatPassword">Repeat new password</label>
+              <input class="Field" type="password" name="resetRepeatPassword" id="resetRepeatPassword" required>
+            </div>
+            <input type="submit" name="resetPassword" value="Submit" class="SubmissionButton" id= "signInButton">
+          </form>
+          <div id="resetText">
+            <p>Password changed successfully.</p>
+          </div>
+            <button type= "button" name="goHome" value="Go to Sign In" class="SubmissionButton" id= "goHomeButton" onclick= "goHome()">Go to Home</button>
+        </div>
+      </div>
+    </script>
+    <script src="static/client.js" type="text/javascript"></script>
+    <script src="static/hashHelper.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="extraDiv">
+      <h1 id="alertHeader">Hej</h1>
+    </div>
+    <div id="bodyDiv">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+body {
+  background-color: #69b6f0;
+}
+
+form {
+  background-color: white;
+}
+
+@keyframes fadeload {
+    from {opacity: 0  }
+    to {opacity: 1 }
+}
+
+#main {
+  margin-top: 100;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: fadeload;
+	animation-duration: 3.5s;
+  height: 400px;
+  max-width : 600px;
+}
+
+#logo {
+  width: 340px;
+  height : inherit;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+#recoverPassword {
+
+}
+
+#recoverPassword h2 {
+  color: #69b6f0;
+  text-align: center;
+  margin-block-end: 0;
+}
+
+#welcomeForms {
+  float: right;
+  width: 250px;
+  height : inherit;
+}
+
+#welcomeForms h2 {
+  color: #69b6f0;
+  text-align: center;
+  margin-block-end: 0;
+}
+
+#sendEmailForm {
+  height : inherit;
+  border-radius: 10px;
+  margin-block-end: 0;
+}
+
+#sendCodeForm {
+  display: none;
+}
+
+#signInForm {
+  height: 110px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#signInButton {
+  display: inline-block;
+}
+
+#signUpForm {
+  height: 280px;
+  border-radius: 10px;
+}
+
+#signUpButton {
+  margin-top: 4px;
+}
+
+#profileDiv {
+  margin-left: auto;
+  margin-right: auto;
+
+  animation-name: fadeload;
+	animation-duration: 3.5s;
+  height: 100%;
+  width : 100%;
+}
+
+#profileTitle img {
+  margin-left: 35%;
+  margin-right: 35%;
+  width: 30%;
+}
+
+#profileTabRow {
+  margin-bottom: 10px;
+}
+
+#extraDiv {
+  display: none;
+}
+
+#HomeLeftSide {
+  width: 50%;
+  display: inline-block;
+}
+
+#homeRightSide {
+  width: 50%;
+  display: inline-block;
+  float: right;
+}
+
+#homeRightSide h1 {
+  display: inline-block;
+}
+
+#refreshButton {
+  float: right;
+  margin-top: 25px;
+  width: 100px;
+}
+
+#forgetButton {
+  display: inline-block;
+  width: 125px;
+  margin: 0;
+  padding: 0;
+  color: blue;
+  margin-left: 25px;
+  font-family: 'Gayathri', sans-serif;
+}
+
+#forgetButton:hover {
+  cursor: pointer;
+}
+
+#codeText {
+  display: none;
+}
+
+#resetPasswordForm {
+  display: none;
+}
+
+#resetText {
+  display: none;
+}
+
+#goHomeButton {
+  display: block;
+  float: right;
+  width: auto;
+}
+
+.HomeUserAttribute {
+}
+
+.SubmissionButton {
+  border-radius: 50px;
+  width: 80px;
+  font-family: 'Gayathri', sans-serif;
+  vertical-align: middle;
+}
+
+.SubmissionButton:hover {
+  background-color: #69b6f0;
+  color: white;
+}
+
+.SubmissionButton:active {
+  background-color: #066ab8;
+}
+
+.Row {
+    margin-top: 5px;
+}
+
+.Row label {
+  display: inline-block;
+  width: 100px;
+  margin-left: 5px;
+  text-align: left;
+  font-family: 'Gayathri', sans-serif;
+}
+
+.Field {
+  width : 100px;
+}
+
+.SignText {
+  font-family: 'Gayathri', sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  margin-block-start: 0;
+}
+
+.Content {
+  display: none;
+}
+
+.ProfileBox {
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 23px;
+}
+
+.ProfileButton {
+  margin-left: 10px;
+  width: 100px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.PasswordChangeInputRow {
+  margin-bottom: 10px;
+}
+
+.PasswordChangeInputRow label {
+  display: inline-block;
+  width: 200px;
+  margin-left: 5px;
+  text-align: left;
+  font-family: 'Gayathri', sans-serif;
+}
+
+.Message {
+  display: block;
+  width: 200px;
+  margin-left: 5px;
+  margin-top: 10px;
+  text-align: left;
+  font-family: 'Gayathri', sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: beige;
+}
+
+.Content {
+  overflow: hidden;
+}
+
+.Info label {
+  display: inline-block;
+  width: 100px;
+  margin-left: 5px;
+  text-align: left;
+  font-family: 'Gayathri', sans-serif;
+
+}
