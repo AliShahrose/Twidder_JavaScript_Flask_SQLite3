@@ -2,7 +2,7 @@ A social media website made as a single page application.
 Uses Gevent pywsgi server and websockets.
 
 A version without websockets is deployed on Heroku at:
-[TwidderOnHerokuHere](mu13twidder.herokuapp.com)
+[TwidderOnHerokuHere](http://mu13twidder.herokuapp.com)
 
 Front-End: JavaScript
 Back-End: Flask
