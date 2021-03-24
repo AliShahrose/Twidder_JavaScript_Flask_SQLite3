@@ -5,7 +5,7 @@ A version without websockets is deployed on Heroku at:
 [TwidderOnHerokuHere](http://mu13twidder.herokuapp.com)
 
 Front-End: JavaScript
-Back-End: Flask
+Back-End: Flask (A Python microframework)
 Database: SQLite3
 
 Welcome Page: Ability to Sign In, Sign Up and go to Recover Password.
